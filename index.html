@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChamaChain</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>💰 ChamaChain - Community Savings Tracker</h1>
+
+  <form id="memberForm">
+    <input type="text" id="memberName" placeholder="Member Name" required>
+    <input type="number" id="amount" placeholder="Amount Saved" required>
+    <select id="coin">
+      <option value="USDC">USDC</option>
+      <option value="USDT">USDT</option>
+    </select>
+    <button type="submit">Add Contribution</button>
+  </form>
+
+  <table id="recordsTable">
+    <thead>
+      <tr>
+        <th>Member</th>
+        <th>Amount</th>
+        <th>Coin</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div id="mockTransaction" style="margin-top:1rem; font-style: italic;"></div>
+  <button onclick="exportCSV()">Download CSV</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
